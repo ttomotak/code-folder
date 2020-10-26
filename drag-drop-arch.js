@@ -50,7 +50,6 @@ if (args.length > 0) {
 //WScript.Echo("アーカイブ完了" );
 WScript.Quit(0);
 
-// 拾い物関数
 function YYYYMMDD() {
   var s = "";
   var d = new Date();
