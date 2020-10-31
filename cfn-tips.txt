@@ -1,0 +1,14 @@
+# cfn-lint　https://dev.classmethod.jp/articles/use-linter-to-notice-mistakes-of-cloudformation/
+# sudo pip install cfn-lint
+# cfn-lint xxx.yml
+
+CFN_STACK_NAME=IM01-ec2
+CFN_TEMPLATE=02-ec2.yml
+
+aws cloudformation deploy --stack-name ${CFN_STACK_NAME} --template-file ${CFN_TEMPLATE} --no-execute-changeset --capabilities CAPABILITY_NAMED_IAM
+
+aws cloudformation create-stack --stack-name ${CFN_STACK_NAME} --template-body file://${CFN_TEMPLATE}
+
+※IAM や IAM Role に名前を付けたい場合は CAPABILITY_NAMED_IAM を指定しないとダメ．
+--capabilities CAPABILITY_NAMED_IAM
+
