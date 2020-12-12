@@ -132,6 +132,9 @@ Resources:
             echo "  @type s3">> /etc/td-agent/td-agent.conf
             echo "  s3_bucket ${S3name}">> /etc/td-agent/td-agent.conf
             echo "  path logs/">> /etc/td-agent/td-agent.conf
+            echo "  <format>">> /etc/td-agent/td-agent.conf
+            echo "    @type ltsv">> /etc/td-agent/td-agent.conf
+            echo "  </format>">> /etc/td-agent/td-agent.conf
             echo "  <buffer>">> /etc/td-agent/td-agent.conf
             echo "    @type file">> /etc/td-agent/td-agent.conf
             echo "    path /var/log/td-agent/s3">> /etc/td-agent/td-agent.conf
