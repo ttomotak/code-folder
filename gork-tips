@@ -1,0 +1,6 @@
+# パターンの作成
+Grok Constructor
+https://grokconstructor.appspot.com/do/match
+
+# ログのパターン
+https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
