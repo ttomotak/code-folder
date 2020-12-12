@@ -11,7 +11,7 @@ Parameters:
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
   SSHAccessSourceIP:
     Type: String
-    Default: 58.146.94.100/32
+    Default: xx.xx.xx.xx/32
   Hostname:
     Type: String
     Default: dev-mgt01
