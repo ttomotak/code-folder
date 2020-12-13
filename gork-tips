@@ -7,7 +7,7 @@ https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/
 
 # DBの作成
 CREATE EXTERNAL TABLE `mygroktable`(
-   host int,
+   host string,
    user string,
    method string,
    path string,
