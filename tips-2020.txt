@@ -161,3 +161,43 @@ For /F "usebackq skip=1 tokens=*" %i In ( `Type (ログファイル名1)` ) Do E
 ・依頼: 経緯、依頼、背景、補足
 ・報告: 経緯、補足、次のアクション
 ・相談: 経緯、相談事項１、相談事項２、補足、次のアクション
+
+# VM関連
+https://qiita.com/BooookStore/items/653171a338163058670e
+
+#構成
+192.168.50.1 : host
+↓
+192.168.50.2 : target
+
+# vagrantのコマンド一覧
+vagrant ssh ansible-host-node
+vagrant ssh ansible-controll-node
+vagrant global-status　一覧
+ vagrant global-status --prune　キャッシュを消して、一覧
+vagrant destroy id番号
+vagrant up　起動
+vagrant halt　停止
+
+★vagrantはコードでサクッと複数台用意できる。
+
+# docker
+docker run -it --name NAME IMAGE bash
+docker search 
+docker pull
+docker image list
+docker run -itd --name target -h target 688353a31fde
+docker run -itd --name controller -h controller 688353a31fde
+docker ps -a
+docker exec -it target /bin/bash
+docker restart target controller 
+hostname -i
+yum -y install initscripts MAKEDEV
+yum -y install openssh-server
+
+★-dはバックグラウンド。-dがないとexitするとコンテナも停止する。
+★ctlr ＋ p (rocess) ＋  q  (uit)
+
+# ssh鍵をクライアントへ送り込み
+docker cp $CONTAINER_ID:/root/.ssh/id_rsa $CONTAINER_ID
+systemctl enable sshd
