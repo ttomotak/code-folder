@@ -1,0 +1,17 @@
+##s3のデータ	シェル
+
+##取り込みテーブル	手動、初期構築のみ
+	テーブルのデータは自動取り込み
+
+##シェル※参考
+	with とselect文(from 取り込みテーブル)でCTAS実行し、パーステーブルを作成。
+	クエリ結果の保存先を指定。デフォルトはUnsavedになる。
+
+##パーステーブル	手動、シェル、毎月実行
+	QuickSightへ取り込み
+
+##参考
+・スクリプト例
+	https://qiita.com/kazu23pole/items/e5dc0467c4c97a80ba50
+・CATS例
+	https://aws.amazon.com/jp/premiumsupport/knowledge-center/set-file-number-size-ctas-athena/
